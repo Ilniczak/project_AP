@@ -1,0 +1,26 @@
+=== Validation (model selection) ===
+LogReg_balanced: ROC-AUC(valid) = 0.685
+RandomForest: ROC-AUC(valid) = 0.647
+HistGB: ROC-AUC(valid) = 0.643
+
+Best model: LogReg_balanced
+Threshold tuned on valid for max F1: 0.516
+Valid @ tuned thr — F1=0.320, Precision=0.217, Recall=0.614
+
+=== Test (final) ===
+ROC-AUC(test) = 0.677
+Average Precision (PR-AUC)(test) = 0.240
+
+Classification report @ tuned threshold (test):
+              precision    recall  f1-score   support
+
+           0      0.918     0.657     0.766      2084
+           1      0.213     0.614     0.317       316
+
+    accuracy                          0.651      2400
+   macro avg      0.566     0.635     0.541      2400
+weighted avg      0.825     0.651     0.707      2400
+
+Confusion matrix @ tuned threshold (test):
+[[1369  715]
+ [ 122  194]]
